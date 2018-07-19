@@ -26,7 +26,24 @@
 }
 
 - (void)testHexColor {
-    [UIColor hex:@"#ffcfcfcf"];
+    [UIColor hex:@"#8ccfcfcf"];
+}
+
+- (void)testHex
+{
+    NSString *hex = @"4D";
+    if ([hex length] == 0) {
+        return;
+    }
+    
+    NSScanner *scanner = [NSScanner scannerWithString:hex];
+    unsigned long long longlongValue;
+    [scanner scanHexLongLong:&longlongValue];
+    CGFloat value = [[NSNumber numberWithLongLong:longlongValue] floatValue];
+    
+    //XCTAssertEqual(115.f, value);
+    CGFloat alpha = roundf((value/255.0)*100)*0.01;
+    XCTAssertEqual(30.f, roundf(alpha*100));
 }
 
 - (void)testPerformanceExample {

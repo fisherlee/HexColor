@@ -68,7 +68,7 @@
         
         // Scan values
         unsigned int r, g, b;
-        CGFloat alpha = [UIColor alphaValueAtHex:aString];
+        CGFloat alpha = [UIColor alphaHex:aString];
         [[NSScanner scannerWithString:rString] scanHexInt:&r];
         [[NSScanner scannerWithString:gString] scanHexInt:&g];
         [[NSScanner scannerWithString:bString] scanHexInt:&b];
@@ -83,7 +83,23 @@
     }
 }
 
-#pragma mark - Android中颜色透明度对应16进制值
+#pragma mark - Android中颜色不透明度对应16进制值
+
++ (CGFloat)alphaHex:(NSString *)hex
+{
+    if ([hex length] == 0) {
+        return 1;
+    }
+    
+    NSScanner *scanner = [NSScanner scannerWithString:hex];
+    unsigned long long llv;
+    [scanner scanHexLongLong:&llv];
+    CGFloat value = [[NSNumber numberWithLongLong:llv] floatValue];
+    CGFloat alpha = roundf((value/255.0)*100)*0.01;
+    
+    return alpha;
+}
+
 
 //百分比-开头字母
 //100% FF
