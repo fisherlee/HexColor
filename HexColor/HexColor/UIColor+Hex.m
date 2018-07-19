@@ -123,35 +123,5 @@
 //10% — 1A
 //5% — 0D
 //0% — 00
-+ (CGFloat)alphaValueAtHex:(NSString *)hex
-{
-    NSDictionary *dict = @{@"FF":@100,
-                           @"F2":@95,
-                           @"E6":@90,
-                           @"D9":@85,
-                           @"CC":@80,
-                           @"BF":@75,
-                           @"B3":@70,
-                           @"A6":@65,
-                           @"99":@60,
-                           @"8C":@55,
-                           @"73":@45,
-                           @"66":@40,
-                           @"59":@35,
-                           @"4D":@30,
-                           @"40":@25,
-                           @"33":@20,
-                           @"26":@15,
-                           @"1A":@10,
-                           @"0D":@5,
-                           @"00":@0
-                           };
-    NSArray *allKeys = [dict allKeys];
-    if (![allKeys containsObject:hex]) {
-        return 1.0;
-    }else {
-        return [dict[hex] integerValue]/100.00;
-    }
-}
 
 @end
