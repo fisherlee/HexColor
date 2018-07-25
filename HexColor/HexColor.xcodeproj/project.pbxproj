@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0F53EC72106FC8C00AC253B /* IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F53EC62106FC8C00AC253B /* IPAddress.m */; };
 		D0F55C4C20FEE2E600B722ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F55C4B20FEE2E600B722ED /* AppDelegate.m */; };
 		D0F55C4F20FEE2E600B722ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F55C4E20FEE2E600B722ED /* ViewController.m */; };
 		D0F55C5220FEE2E600B722ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F55C5020FEE2E600B722ED /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0F53EC52106FC8C00AC253B /* IPAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
+		D0F53EC62106FC8C00AC253B /* IPAddress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPAddress.m; sourceTree = "<group>"; };
 		D0F55C4720FEE2E600B722ED /* HexColor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexColor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F55C4A20FEE2E600B722ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0F55C4B20FEE2E600B722ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				D0F55C5920FEE2E800B722ED /* main.m */,
 				D0F55C7120FEE35F00B722ED /* UIColor+Hex.h */,
 				D0F55C7220FEE35F00B722ED /* UIColor+Hex.m */,
+				D0F53EC52106FC8C00AC253B /* IPAddress.h */,
+				D0F53EC62106FC8C00AC253B /* IPAddress.m */,
 			);
 			path = HexColor;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0F55C4F20FEE2E600B722ED /* ViewController.m in Sources */,
+				D0F53EC72106FC8C00AC253B /* IPAddress.m in Sources */,
 				D0F55C7320FEE35F00B722ED /* UIColor+Hex.m in Sources */,
 				D0F55C5A20FEE2E800B722ED /* main.m in Sources */,
 				D0F55C4C20FEE2E600B722ED /* AppDelegate.m in Sources */,

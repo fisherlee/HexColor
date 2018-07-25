@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIColor+Hex.h"
+#import "IPAddress.h"
 
 @interface ViewController ()
 
@@ -25,6 +26,10 @@
     _view1.backgroundColor = [UIColor hex:@"#ff4500"];
     _view2.backgroundColor = [UIColor hex:@"#ffff4500"];
     _view3.backgroundColor = [UIColor hex:@"#4dff4500"];
+    
+    NSLog(@"getIPAddress NO: %@", [[IPAddress shareInstance] getIPAddress:NO]);
+    NSLog(@"getIPAddress YES: %@", [[IPAddress shareInstance] getIPAddress:YES]);
+    NSLog(@"getIPAddresses: %@", [[IPAddress shareInstance] getIPAddresses]);
 }
 
 
